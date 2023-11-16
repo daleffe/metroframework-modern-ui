@@ -18,6 +18,7 @@ namespace MetroFramework.Controls
 
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public event EventHandler<MetroPaintEventArgs> CustomPaintBackground;
+
         protected virtual void OnCustomPaintBackground(MetroPaintEventArgs e)
         {
             if (GetStyle(ControlStyles.UserPaint) && CustomPaintBackground != null)
@@ -28,6 +29,7 @@ namespace MetroFramework.Controls
 
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public event EventHandler<MetroPaintEventArgs> CustomPaint;
+
         protected virtual void OnCustomPaint(MetroPaintEventArgs e)
         {
             if (GetStyle(ControlStyles.UserPaint) && CustomPaint != null)
@@ -38,6 +40,7 @@ namespace MetroFramework.Controls
 
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public event EventHandler<MetroPaintEventArgs> CustomPaintForeground;
+
         protected virtual void OnCustomPaintForeground(MetroPaintEventArgs e)
         {
             if (GetStyle(ControlStyles.UserPaint) && CustomPaintForeground != null)
@@ -47,6 +50,7 @@ namespace MetroFramework.Controls
         }
 
         private MetroColorStyle metroStyle = MetroColorStyle.Default;
+
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         [DefaultValue(MetroColorStyle.Default)]
         public MetroColorStyle Style
@@ -73,6 +77,7 @@ namespace MetroFramework.Controls
         }
 
         private MetroThemeStyle metroTheme = MetroThemeStyle.Default;
+
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         [DefaultValue(MetroThemeStyle.Default)]
         public MetroThemeStyle Theme
@@ -99,6 +104,7 @@ namespace MetroFramework.Controls
         }
 
         private MetroStyleManager metroStyleManager = null;
+
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public MetroStyleManager StyleManager
@@ -108,6 +114,7 @@ namespace MetroFramework.Controls
         }
 
         private bool useCustomBackColor = false;
+
         [DefaultValue(false)]
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public bool UseCustomBackColor
@@ -117,6 +124,7 @@ namespace MetroFramework.Controls
         }
 
         private bool useCustomForeColor = false;
+
         [DefaultValue(false)]
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public bool UseCustomForeColor
@@ -126,6 +134,7 @@ namespace MetroFramework.Controls
         }
 
         private bool useStyleColors = false;
+
         [DefaultValue(false)]
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public bool UseStyleColors
@@ -143,11 +152,12 @@ namespace MetroFramework.Controls
             set { SetStyle(ControlStyles.Selectable, value); }
         }
 
-        #endregion
+        #endregion Interface
 
         #region Fields
 
         private bool displayFocusRectangle = false;
+
         [DefaultValue(false)]
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public bool DisplayFocus
@@ -156,8 +166,8 @@ namespace MetroFramework.Controls
             set { displayFocusRectangle = value; }
         }
 
-
         private MetroDateTimeSize metroDateTimeSize = MetroDateTimeSize.Medium;
+
         [DefaultValue(MetroDateTimeSize.Medium)]
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public MetroDateTimeSize FontSize
@@ -167,6 +177,7 @@ namespace MetroFramework.Controls
         }
 
         private MetroDateTimeWeight metroDateTimeWeight = MetroDateTimeWeight.Regular;
+
         [DefaultValue(MetroDateTimeWeight.Regular)]
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public MetroDateTimeWeight FontWeight
@@ -180,7 +191,7 @@ namespace MetroFramework.Controls
         public new bool ShowUpDown
         {
             get { return base.ShowUpDown; }
-            set { base.ShowUpDown = false; }
+            set { base.ShowUpDown = value; }
         }
 
         [Browsable(false)]
@@ -200,18 +211,19 @@ namespace MetroFramework.Controls
         private bool isPressed = false;
         private bool isFocused = false;
 
-        #endregion
+        #endregion Fields
 
         #region Constructor
+
         public MetroDateTime()
         {
             SetStyle(ControlStyles.SupportsTransparentBackColor |
                   ControlStyles.OptimizedDoubleBuffer |
                   ControlStyles.ResizeRedraw |
                   ControlStyles.UserPaint, true);
-
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Paint Methods
 
@@ -312,7 +324,6 @@ namespace MetroFramework.Controls
 
                 if (Checked)
                 {
-
                     Color fillColor = MetroPaint.GetStyleColor(Style);
 
                     using (SolidBrush b = new SolidBrush(fillColor))
@@ -343,7 +354,7 @@ namespace MetroFramework.Controls
             Invalidate();
         }
 
-        #endregion
+        #endregion Paint Methods
 
         #region Focus Methods
 
@@ -385,7 +396,7 @@ namespace MetroFramework.Controls
             base.OnLeave(e);
         }
 
-        #endregion
+        #endregion Focus Methods
 
         #region Keyboard Methods
 
@@ -410,7 +421,7 @@ namespace MetroFramework.Controls
             base.OnKeyUp(e);
         }
 
-        #endregion
+        #endregion Keyboard Methods
 
         #region Mouse Methods
 
@@ -449,7 +460,7 @@ namespace MetroFramework.Controls
             base.OnMouseLeave(e);
         }
 
-        #endregion
+        #endregion Mouse Methods
 
         #region Overridden Methods
 
@@ -474,6 +485,6 @@ namespace MetroFramework.Controls
             base.WndProc(ref m);
         }
 
-        #endregion
+        #endregion Overridden Methods
     }
 }
