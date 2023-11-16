@@ -624,9 +624,9 @@ namespace MetroFramework.Forms
                         if (WindowState == FormWindowState.Normal)
                         {
                             if (shadowForm != null) shadowForm.Visible = true;
-                            btn.Text = "1";
+                            btn.Text = "\uD83D\uDDD6";
                         }
-                        if (WindowState == FormWindowState.Maximized) btn.Text = "2";
+                        if (WindowState == FormWindowState.Maximized) btn.Text = "\uD83D\uDDD7";
                     }
                     break;
             }
@@ -740,22 +740,22 @@ namespace MetroFramework.Forms
 
             if (button == WindowButtons.Close)
             {
-                newButton.Text = "r";
+                newButton.Text = "\u274C"; //using Unicode instead of fonts
             }
             else if (button == WindowButtons.Minimize)
             {
-                newButton.Text = "0";
+                newButton.Text = "\uD83D\uDDD5"; //using Unicode instead of fonts
             }
             else if (button == WindowButtons.Maximize)
             {
                 if (WindowState == FormWindowState.Normal)
-                    newButton.Text = "1";
+                    newButton.Text = "\uD83D\uDDD6"; //using Unicode instead of fonts
                 else
-                    newButton.Text = "2";
+                    newButton.Text = "\uD83D\uDDD7"; //using Unicode instead of fonts
             }
             else if (button == WindowButtons.Pin)
             {
-                newButton.Text = TopMost ? "=" : "\u1F4CC";
+                newButton.Text = TopMost ? "\u003D" : "\uD83D\uDCCC";
             }
 
             newButton.Style = Style;
@@ -789,12 +789,12 @@ namespace MetroFramework.Forms
                     if (WindowState == FormWindowState.Normal)
                     {
                         WindowState = FormWindowState.Maximized;
-                        btn.Text = "2";
+                        btn.Text = "\uD83D\uDDD7";//using Unicode instead of fonts
                     }
                     else
                     {
                         WindowState = FormWindowState.Normal;
-                        btn.Text = "1";
+                        btn.Text = "\uD83D\uDDD6"; //using Unicode instead of fonts
                     }
                 }
                 else if (btnFlag == WindowButtons.Pin)
@@ -1065,8 +1065,9 @@ namespace MetroFramework.Forms
                 }
 
                 e.Graphics.Clear(backColor);
-                Font buttonFont = new Font("Webdings", 9.25f);
-                TextRenderer.DrawText(e.Graphics, Text, buttonFont, ClientRectangle, foreColor, backColor, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
+                // remove font required for window buttons and use unicode chars instead
+                //Font buttonFont = new Font("Webdings", 9.25f);
+                TextRenderer.DrawText(e.Graphics, Text, Font, ClientRectangle, foreColor, backColor, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
             }
 
             #endregion Paint Methods
