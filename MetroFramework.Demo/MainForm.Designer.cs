@@ -37,7 +37,7 @@ namespace MetroFramework.Demo
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroDropDownButton1 = new MetroFramework.Controls.MetroDropDownButton();
+            //this.metroDropDownButton1 = new MetroFramework.Controls.MetroDropDownButton();
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maintenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -166,7 +166,7 @@ namespace MetroFramework.Demo
             // metroTabPage1
             // 
             this.metroTabPage1.AutoScroll = true;
-            this.metroTabPage1.Controls.Add(this.metroDropDownButton1);
+            //this.metroTabPage1.Controls.Add(this.metroDropDownButton1);
             this.metroTabPage1.Controls.Add(this.metroRadioButton4);
             this.metroTabPage1.Controls.Add(this.metroRadioButton5);
             this.metroTabPage1.Controls.Add(this.metroCheckBox4);
@@ -205,7 +205,7 @@ namespace MetroFramework.Demo
             // 
             // metroDropDownButton1
             // 
-            this.metroDropDownButton1.AutoSize = true;
+            /*this.metroDropDownButton1.AutoSize = true;
             this.metroDropDownButton1.ContextMenuStrip = this.metroContextMenu1;
             this.metroDropDownButton1.Image = global::MetroFramework.Demo.Properties.Resources.AttachOrDetach_7014;
             this.metroDropDownButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,7 +215,7 @@ namespace MetroFramework.Demo
             this.metroDropDownButton1.SplitMenuStrip = this.metroContextMenu1;
             this.metroDropDownButton1.TabIndex = 24;
             this.metroDropDownButton1.Text = "DropDownButton";
-            this.metroDropDownButton1.UseSelectable = true;
+            this.metroDropDownButton1.UseSelectable = true;*/
             // 
             // metroContextMenu1
             // 
@@ -540,7 +540,7 @@ namespace MetroFramework.Demo
             // 
             // metroComboBox4
             // 
-            this.metroComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            /*this.metroComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.metroComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.metroComboBox4.FormattingEnabled = true;
             this.metroComboBox4.ItemHeight = 24;
@@ -551,11 +551,11 @@ namespace MetroFramework.Demo
             this.metroComboBox4.Size = new System.Drawing.Size(283, 30);
             this.metroComboBox4.TabIndex = 23;
             this.metroToolTip.SetToolTip(this.metroComboBox4, "ComboBox Tooltip");
-            this.metroComboBox4.UseSelectable = true;
+            this.metroComboBox4.UseSelectable = true;*/
             // 
             // metroComboBox3
             // 
-            this.metroComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            /*this.metroComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.metroComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.metroComboBox3.Cursor = Cursors.Hand;
             this.metroComboBox3.FormattingEnabled = true;
@@ -572,7 +572,7 @@ namespace MetroFramework.Demo
             this.metroComboBox3.Size = new System.Drawing.Size(283, 30);
             this.metroComboBox3.TabIndex = 21;
             this.metroToolTip.SetToolTip(this.metroComboBox3, "ComboBox Tooltip");
-            this.metroComboBox3.UseSelectable = true;
+            this.metroComboBox3.UseSelectable = true;*/
             // 
             // metroDateTime2
             // 
@@ -1183,7 +1183,7 @@ namespace MetroFramework.Demo
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "With Placeholder support!";
+            this.metroTextBox1.WaterMark = "With Placeholder support!";
             this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBox1.SelectedText = "";
             this.metroTextBox1.SelectionLength = 0;
@@ -1616,7 +1616,7 @@ namespace MetroFramework.Demo
         private Controls.MetroLabel metroLabel22;
         private Controls.MetroRadioButton metroRadioButton6;
         private Controls.MetroCheckBox metroCheckBox6;
-        private Controls.MetroDropDownButton metroDropDownButton1;
+        //private Controls.MetroDropDownButton metroDropDownButton1;
     }
 }
 
